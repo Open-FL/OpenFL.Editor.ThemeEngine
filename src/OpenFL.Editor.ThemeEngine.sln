@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FL", "FL", "{135C3EAC-5C51-
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CL", "CL", "{50F28F5C-A7CB-4286-BC0E-0C585DDA6C54}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenCL", "..\deps\OpenFL.Editor\deps\OpenFL\deps\OpenCL.Wrapper\deps\OpenCL\src\OpenCL\OpenCL.csproj", "{2CFBDB02-542F-4142-807B-B607F3C79466}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenCL.NET", "..\deps\OpenFL.Editor\deps\OpenFL\deps\OpenCL.Wrapper\deps\OpenCL\src\OpenCL\OpenCL.NET.csproj", "{2CFBDB02-542F-4142-807B-B607F3C79466}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenCL.Wrapper", "..\deps\OpenFL.Editor\deps\OpenFL\deps\OpenCL.Wrapper\src\OpenCL.Wrapper\OpenCL.Wrapper.csproj", "{015EBEC5-22CC-4B92-B84C-CEE9F99906CD}"
 EndProject
