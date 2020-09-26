@@ -19,7 +19,7 @@ namespace OpenFL.Editor.ThemeEngine.Setup
     {
         
 
-        public override string Name => "fl-debugger-theme-engine";
+        public override string Name => "fl-editor-theme-engine";
 
         private EditorThemeSettingsForm f;
         private StyleOptionsMenu optionsForm;
