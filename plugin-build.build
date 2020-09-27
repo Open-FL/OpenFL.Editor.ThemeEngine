@@ -2,4 +2,5 @@ name: fl-editor-theme-engine
 target: .\src\OpenFL.Editor.ThemeEngine\bin\Debug\OpenFL.Editor.ThemeEngine.dll
 output: .\docs\latest\fl-editor-theme-engine.zip
 config: .\src\OpenFL.Editor.ThemeEngine\data\plugins\fl-editor-theme-engine\config
+origin: https://open-fl.github.io/OpenFL.Editor.ThemeEngine/latest/info.txt
 flags: INFO_TO_OUTPUT
