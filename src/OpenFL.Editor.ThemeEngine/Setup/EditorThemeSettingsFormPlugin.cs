@@ -18,9 +18,6 @@ namespace OpenFL.Editor.ThemeEngine.Setup
     public class EditorThemeSettingsFormPlugin : APlugin<FLEditorPluginHost>
     {
         
-
-        public override string Name => "fl-editor-theme-engine";
-
         private EditorThemeSettingsForm f;
         private StyleOptionsMenu optionsForm;
 
