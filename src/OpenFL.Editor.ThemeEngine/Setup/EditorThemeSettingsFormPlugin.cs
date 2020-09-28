@@ -15,14 +15,36 @@ using ThemeEngine.Script.Options;
 
 namespace OpenFL.Editor.ThemeEngine.Setup
 {
+    public class ThemeMessageBoxTestPlugin : APlugin<FLEditorPluginHost>
+    {
+
+        private MessageBoxTestForm testForm;
+
+        [ToolbarItem("Theme Engine/MessageBoxTest", 3)]
+        private void ShowMessageBoxDefault()
+        {
+            if (testForm == null || testForm.IsDisposed)
+            {
+                testForm = new MessageBoxTestForm();
+                testForm.Show();
+            }
+            else
+            {
+                testForm.BringToFront();
+            }
+
+        }
+
+    }
+
     public class EditorThemeSettingsFormPlugin : APlugin<FLEditorPluginHost>
     {
-        
+
         private EditorThemeSettingsForm f;
         private StyleOptionsMenu optionsForm;
 
 
-        [ToolbarItem("File/Theme Options...", 3)]
+        [ToolbarItem("Theme Engine/Theme Options...", 3)]
         private void OnShowThemeOptions()
         {
             if (optionsForm == null || optionsForm.IsDisposed)
@@ -33,13 +55,13 @@ namespace OpenFL.Editor.ThemeEngine.Setup
         }
 
 
-        [ToolbarItem("File/Appearance...", 2)]
+        [ToolbarItem("Theme Engine/Appearance...", 2)]
         private void OnShowAppearance()
         {
             if (f == null || f.IsDisposed)
             {
                 string stylePath = Path.Combine(PluginPaths.GetPluginConfigDirectory(PluginAssemblyData), "styles");
-                f = new EditorThemeSettingsForm( stylePath);
+                f = new EditorThemeSettingsForm(stylePath);
                 f.Show();
             }
         }
@@ -49,9 +71,9 @@ namespace OpenFL.Editor.ThemeEngine.Setup
             base.OnLoad(ptr);
 
             Application.ApplicationExit += Application_ApplicationExit;
-            
+
             string styleDir = Path.Combine(PluginPaths.GetPluginConfigDirectory(PluginAssemblyData), "styles");
-            
+
             Directory.CreateDirectory(styleDir);
 
             StyleManager_OnReload();

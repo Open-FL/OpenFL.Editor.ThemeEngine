@@ -52,12 +52,21 @@
     <Compile Include="Forms\EditorThemeSettingsForm.Designer.cs">
       <DependentUpon>EditorThemeSettingsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MessageBoxTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MessageBoxTestForm.Designer.cs">
+      <DependentUpon>MessageBoxTestForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setup\EditorThemeSettingsFormPlugin.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Forms\EditorThemeSettingsForm.resx">
       <DependentUpon>EditorThemeSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MessageBoxTestForm.resx">
+      <DependentUpon>MessageBoxTestForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
