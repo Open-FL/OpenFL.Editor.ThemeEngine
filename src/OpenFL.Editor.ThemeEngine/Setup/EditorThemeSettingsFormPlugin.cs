@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -32,7 +33,6 @@ namespace OpenFL.Editor.ThemeEngine.Setup
             {
                 testForm.BringToFront();
             }
-
         }
 
     }
@@ -99,7 +99,7 @@ namespace OpenFL.Editor.ThemeEngine.Setup
             }
         }
 
-        private void Application_ApplicationExit(object sender, System.EventArgs e)
+        private void Application_ApplicationExit(object sender, EventArgs e)
         {
             string styleDir = Path.Combine(PluginPaths.GetPluginConfigDirectory(PluginAssemblyData), "styles");
             string[] lines = StyleManager.StyleOptions.Where(x => x.HasChanged).Select(x => $"{x.Keyword}: {x.Value}")

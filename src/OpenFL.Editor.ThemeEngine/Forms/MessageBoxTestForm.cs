@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using ThemeEngine.Forms;
@@ -15,13 +10,13 @@ namespace OpenFL.Editor.ThemeEngine.Forms
 {
     public partial class MessageBoxTestForm : Form
     {
+
         public MessageBoxTestForm()
         {
             InitializeComponent();
-            
+
             cbBorderStyle.Items.AddRange(Enum.GetNames(typeof(FormBorderStyle)));
-            cbContentStyle.Items.AddRange(Enum.GetNames(typeof(StyledMessageBox.
-                                                            MessageBoxContent)));
+            cbContentStyle.Items.AddRange(Enum.GetNames(typeof(StyledMessageBox.MessageBoxContent)));
             cbIcon.Items.AddRange(GetIconNames());
 
             cbMessageBoxButtons.Items.AddRange(Enum.GetNames(typeof(MessageBoxButtons)));
@@ -49,7 +44,6 @@ namespace OpenFL.Editor.ThemeEngine.Forms
                                                               ),
                                   new Size((int) nudSizeWidth.Value, (int) nudSizeHeight.Value)
                                  );
-
         }
 
         private string[] GetIconNames()
@@ -63,5 +57,6 @@ namespace OpenFL.Editor.ThemeEngine.Forms
             PropertyInfo pi = typeof(SystemIcons).GetProperty(name);
             return (Icon) pi.GetValue(null);
         }
+
     }
 }

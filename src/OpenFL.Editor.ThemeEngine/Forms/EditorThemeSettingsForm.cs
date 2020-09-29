@@ -13,13 +13,13 @@ namespace OpenFL.Editor.ThemeEngine.Forms
     public partial class EditorThemeSettingsForm : Form
     {
 
+        private readonly DataGridView dgvOptions;
+
         private readonly FileSystemWatcher fswStyles;
 
-        private readonly string StylePath;
-        
         private readonly bool NoSet;
 
-        private readonly DataGridView dgvOptions;
+        private readonly string StylePath;
 
         public EditorThemeSettingsForm(string stylePath)
         {
@@ -41,7 +41,6 @@ namespace OpenFL.Editor.ThemeEngine.Forms
 
         private void InitializeThemes()
         {
-
             cbStyle.Items.AddRange(
                                    Directory
                                        .GetFiles(StylePath, "*.style", SearchOption.TopDirectoryOnly)
@@ -87,8 +86,6 @@ namespace OpenFL.Editor.ThemeEngine.Forms
                                                cbStyle.SelectedItem + ".style"
                                               )
                                  );
-
-
             }
         }
 
