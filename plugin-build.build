@@ -1,6 +1,13 @@
 name: fl-editor-theme-engine
-target: .\src\OpenFL.Editor.ThemeEngine\bin\Debug\OpenFL.Editor.ThemeEngine.dll
-output: .\docs\latest\fl-editor-theme-engine.zip
-config: .\src\OpenFL.Editor.ThemeEngine\data\plugins\fl-editor-theme-engine\config
-origin: https://open-fl.github.io/OpenFL.Editor.ThemeEngine/latest/info.txt
+branch: Debug
+project-name: OpenFL.Editor.ThemeEngine
 flags: INFO_TO_OUTPUT
+
+#Build Info
+target: %buildout%\%project-name%.dll
+config: .\src\%project-name%\data\plugins\%name%\config
+solution: .\src\%project-name%.sln
+output: .\docs\latest\%name%.zip
+origin: https://open-fl.github.io/%project-name%/latest/info.txt
+buildout: .\src\%project-name%\bin\%branch%
+buildcmd: msbuild {0} /t:Build /p:Configuration=%branch%
