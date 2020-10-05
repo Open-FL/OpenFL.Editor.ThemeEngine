@@ -33,10 +33,9 @@ namespace OpenFL.Editor.ThemeEngine.Forms
                                                                 ),
                                   GetIcon(cbIcon.SelectedItem.ToString()),
                                   (StyledMessageBox.MessageBoxContent) Enum.Parse(
-                                                                                  typeof(StyledMessageBox.
-                                                                                      MessageBoxContent),
-                                                                                  cbContentStyle.SelectedItem.ToString()
-                                                                                 ),
+                                       typeof(StyledMessageBox.MessageBoxContent),
+                                       cbContentStyle.SelectedItem.ToString()
+                                      ),
                                   cbHasImage.Checked ? new Bitmap(512, 512) : null,
                                   (FormBorderStyle) Enum.Parse(
                                                                typeof(FormBorderStyle),
