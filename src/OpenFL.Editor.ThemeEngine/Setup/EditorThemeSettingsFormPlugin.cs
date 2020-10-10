@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 
 using OpenFL.Editor.ThemeEngine.Forms;
+using OpenFL.Editor.Utils.Plugins;
 
 using PluginSystem.Core.Pointer;
 using PluginSystem.FileSystem;
